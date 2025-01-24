@@ -6,10 +6,9 @@
 // });
 
 sap.ui.define(["sap/ui/core/mvc/XMLView"], (XMLView) => {
-  console.log("console", XMLView);
   ("use strict");
   XMLView.create({
-    viewName: "ui5.walkthrough11.view.App",
+    viewName: "ui5.walkthrough.view.App",
     // viewName: "wrong.path.view.App", // 에러 발생시키는 코드
   })
     .then((oView) => oView.placeAt("content"))
