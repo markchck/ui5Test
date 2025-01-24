@@ -25,7 +25,13 @@
   <Input
     value="{/recipient/name}"
     description="Hello {/recipient/name}"
-    enabled="false" />
+    valueLiveUpdate="true"
+    width="60%"
+  />
 
+  <!-- 양방향 바인딩을 해놨기 때문에 
+  위에 Input에서 값을 바꿔버리면 Text도 바뀌어버린다.
+  따라서 자칫 값이 어디에서 바뀌는지 못 찾을 위험성이 있다. -->
+  <Text text="{/recipient/name}" />
 
 </mvc:View>
