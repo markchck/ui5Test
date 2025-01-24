@@ -16,4 +16,16 @@
     text="say Hello"
     press=".onShowHello" />
 
+  <!-- <Input
+    value="{/recipient/name}"
+    description="Hello {/recipient/name}"
+    valueLiveUpdate="false"
+    width="60%"
+  /> -->
+  <Input
+    value="{/recipient/name}"
+    description="Hello {/recipient/name}"
+    enabled="false" />
+
+
 </mvc:View>
