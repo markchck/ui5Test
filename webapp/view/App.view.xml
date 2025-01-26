@@ -14,14 +14,8 @@
 
   <Button
     text="say Hello"
-    press=".onShowHello" />
+    press=".onSayHelloButtonPress" />
 
-  <!-- <Input
-    value="{/recipient/name}"
-    description="Hello {/recipient/name}"
-    valueLiveUpdate="false"
-    width="60%"
-  /> -->
   <Input
     value="{/recipient/name}"
     description="Hello {/recipient/name}"

@@ -8,23 +8,23 @@ sap.ui.define(
     "use strict";
 
     return Controller.extend("ui5.walkthrough.controller.App", {
-      onInit() {
-        // set data model on view
-        const oData = {
-          recipient: {
-            name: "world",
-          },
-        };
+      // onInit() {
+      //   // set data model on view
+      //   const oData = {
+      //     recipient: {
+      //       name: "world",
+      //     },
+      //   };
 
-        const oModel = new JSONModel(oData);
+      //   const oModel = new JSONModel(oData);
 
-        this.getView().setModel(oModel);
-        // console.log("this?", this);
-        // console.log("getView?", this.getView());
-        // console.log("setModel", this.getView().setModel(oModel));
-      },
+      //   this.getView().setModel(oModel);
+      //   // console.log("this?", this);
+      //   // console.log("getView?", this.getView());
+      //   // console.log("setModel", this.getView().setModel(oModel));
+      // },
 
-      onShowHello() {
+      onSayHelloButtonPress() {
         MessageToast.show("Hello, World!!");
       },
     });
