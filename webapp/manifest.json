@@ -2,8 +2,10 @@
   "_version": "1.65.0",
   "sap.app": {
     "id": "ui5.walkthrough",
-    "title": "sample app",
-    "description": "UI5 Walkthrough",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "type": "application",
     "applicationVersion": {
       "version": "1.0.0"
     }
@@ -24,7 +26,16 @@
         "sap.m": {}
       }
     },
-
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ui5.walkthrough.i18n.i18n",
+          "supportedLocales": ["en", "ko", ""],
+          "fallbackLocale": "en"
+        }
+      }
+    },
     "rootView": {
       "viewName": "ui5.walkthrough.view.App",
       "type": "XML",

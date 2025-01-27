@@ -10,10 +10,11 @@
 <mvc:View
   controllerName="ui5.walkthrough.controller.App"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
+  xmlns:mvc="sap.ui.core.mvc"
+>
 
   <Button
-    text="say Hello"
+    text="{i18n>showHelloButtonText}"
     press=".onSayHelloButtonPress" />
 
   <Input
