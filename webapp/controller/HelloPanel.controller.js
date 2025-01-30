@@ -7,13 +7,20 @@ sap.ui.define(
       onSayHelloButtonPress() {
         // read msg from i18n model
         const oBundle = this.getView().getModel("i18n").getResourceBundle();
-        console.log("i18n리소스 : ", oBundle);
         const sRecipient = this.getView()
           .getModel()
           .getProperty("/recipient/name");
         const sMsg = oBundle.getText("helloMsg", [sRecipient]);
 
         MessageToast.show(sMsg);
+      },
+
+      async onOpenDialog() {
+        //create diaog lazily
+        this.oDialog ??= await this.loadFragment({
+          name: "ui5.walkthrough.view.HelloDialog",
+        });
+        this.oDialog.open();
       },
     });
   }
