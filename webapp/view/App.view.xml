@@ -21,34 +21,7 @@
 
         <Page title="{i18n>homePageTitle}"> <!-- Page : 컨테이너 컨트롤. 여러 컨트롤을 모으는 역할 -->
           <content> <!-- content :" 컨트롤을 모으는 역할-->
-            <Panel
-              headerText="{i18n>helloPanelTitle}"
-              class="sapUiResponsiveMargin"
-              width="auto"
-            >
-              <content>
-                <Button
-                  text="{i18n>showHelloButtonText}"
-                  press=".onSayHelloButtonPress"
-                  class="myCustomButton"
-                />
-
-                <Input
-                  value="{/recipient/name}"
-                  valueLiveUpdate="true"
-                  width="60%"
-                />
-
-                <!-- 양방향 바인딩을 해놨기 때문에 
-                  위에 Input에서 값을 바꿔버리면 Text도 바뀌어버린다.
-                  따라서 자칫 값이 어디에서 바뀌는지 못 찾을 위험성이 있다. -->
-                <FormattedText
-                  htmlText="안녕 {/recipient/name}"
-                  class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"
-                />
-
-              </content>
-            </Panel>
+            <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"></mvc:XMLView>
           </content>
         </Page>
 

@@ -7,6 +7,6 @@ html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
 }
 
 .myAppDemoWT .myCustomText {
-  display: block;
+  display: inline-block;
   font-weight: bold;
 }
