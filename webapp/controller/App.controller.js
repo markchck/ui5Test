@@ -12,18 +12,14 @@ sap.ui.define(
       onSayHelloButtonPress() {
         // read msg from i18n model
         const oBundle = this.getView().getModel("i18n").getResourceBundle();
+        console.log("i18n리소스 : ", oBundle);
         const sRecipient = this.getView()
           .getModel()
           .getProperty("/recipient/name");
         const sMsg = oBundle.getText("helloMsg", [sRecipient]);
 
-        // show message
         MessageToast.show(sMsg);
       },
-
-      // onSayHelloButtonPress() {
-      //   MessageToast.show("Hello, World!!");
-      // },
     });
   }
 );
