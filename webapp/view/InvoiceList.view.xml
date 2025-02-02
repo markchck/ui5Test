@@ -30,7 +30,7 @@
 
         <firstStatus>
           <ObjectStatus
-            core:requrie="{
+            core:require="{
               Formatter: 'ui5/walkthrough/model/formatter'
             }"
             text="{
