@@ -7,6 +7,7 @@
     "build": "ui5 build"
   },
   "devDependencies": {
-    "@ui5/cli": "^4.0.13"
+    "@ui5/cli": "^4.0.13",
+    "ui5-middleware-simpleproxy": "^3.3.1"
   }
 }
