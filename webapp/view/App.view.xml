@@ -15,12 +15,12 @@
   xmlns:mvc="sap.ui.core.mvc"
   displayBlock="true"
 >
-  <Shell>
+  <!-- <Shell>
     <App class="myAppDemoWT">
-      <pages> <!-- index.html헤더에 모바일 기기에서 사용하는 속성들을 추가하고, 페이지간 네비게이션을 제공하는 기능-->
+      <pages>  index.html헤더에 모바일 기기에서 사용하는 속성들을 추가하고, 페이지간 네비게이션을 제공하는 기능
 
-        <Page title="{i18n>homePageTitle}"> <!-- Page : 컨테이너 컨트롤. 여러 컨트롤을 모으는 역할 -->
-          <content> <!-- content :" 컨트롤을 모으는 역할-->
+        <Page title="{i18n>homePageTitle}">  Page : 컨테이너 컨트롤. 여러 컨트롤을 모으는 역할 
+          <content>  content :" 컨트롤을 모으는 역할
             <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"></mvc:XMLView>
             <mvc:XMLView
               viewName="ui5.walkthrough.view.InvoiceList" />
@@ -29,6 +29,12 @@
 
       </pages>
     </App>
-  </Shell>
+  </Shell> -->
 
+
+  <Shell>
+    <App
+      class="myAppDemoWT"
+      id="app" />
+  </Shell>
 </mvc:View>
