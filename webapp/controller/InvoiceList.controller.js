@@ -28,9 +28,37 @@ sap.ui.define(
         const oBinding = oList.getBinding("items");
         oBinding.filter(aFilter);
       },
-      onPress() {
+      onPress(oEvent) {
+        const oItem = oEvent.getSource();
         const oRouter = this.getOwnerComponent().getRouter();
-        oRouter.navTo("detail");
+        oRouter.navTo("detail", {
+          invoicePath: window.encodeURIComponent(
+            oItem.getBindingContext("invoice").getPath().substring(1)
+          ),
+        });
+        const a = oItem.getBindingContext("invoice").getPath();
+        console.log(a);
+        // console.log("!!!oEvent: ", oEvent);
+        // console.log("!!!oItem: ", oEvent.getSource());
+        // console.log(
+        //   "!!!getBindingContext: ",
+        //   oItem.getBindingContext("invoice")
+        // );
+        // console.log(
+        //   "!!!getPath: ",
+        //   oItem.getBindingContext("invoice").getPath()
+        // );
+        // console.log(
+        //   "!!!substring: ",
+        //   oItem.getBindingContext("invoice").getPath().substring(1)
+        // );
+
+        console.log(
+          "최종",
+          window.encodeURIComponent(
+            oItem.getBindingContext("invoice").getPath().substring(1)
+          )
+        );
       },
     });
   }
