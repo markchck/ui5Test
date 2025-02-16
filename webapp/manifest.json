@@ -2,7 +2,11 @@
   "_version": "1.65.0",
   "sap.app": {
     "id": "ui5.walkthrough",
-    "i18n": "i18n/i18n.properties",
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": [""],
+      "fallbackLocale": ""
+    },
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "type": "application",
@@ -11,7 +15,7 @@
     },
     "dataSources": {
       "invoiceRemote": {
-        "uri": "/V2/Northwind/Northwind.svc/",
+        "uri": "V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
           "odataVersion": "2.0"
@@ -31,9 +35,34 @@
     "dependencies": {
       "minUI5Version": "1.108.0",
       "libs": {
-        "sap.ui.core": {},
-        "sap.m": {}
+        "sap.m": {},
+        "sap.ui.core": {}
       }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ui5.walkthrough.i18n.i18n",
+          "supportedLocales": ["ko", ""],
+          "fallbackLocale": ""
+        }
+      },
+      "invoice": {
+        "dataSource": "invoiceRemote"
+      }
+    },
+    "rootView": {
+      "viewName": "ui5.walkthrough.view.App",
+      "type": "XML",
+      "id": "app"
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
     },
     "routing": {
       "config": {
@@ -66,31 +95,6 @@
           "name": "Detail"
         }
       }
-    },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "ui5.walkthrough.i18n.i18n",
-          "supportedLocales": ["ko", ""],
-          "fallbackLocale": ""
-        }
-      },
-      "invoice": {
-        "dataSource": "invoiceRemote"
-      }
-    },
-    "rootView": {
-      "viewName": "ui5.walkthrough.view.App",
-      "type": "XML",
-      "id": "app"
-    },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
-        }
-      ]
     }
   }
 }
