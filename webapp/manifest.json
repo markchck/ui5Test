@@ -76,7 +76,7 @@
       "routes": [
         {
           "pattern": "",
-          "name": "overviews",
+          "name": "overview",
           "target": "overview"
         },
         {
